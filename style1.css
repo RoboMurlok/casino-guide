@@ -1,0 +1,307 @@
+:root {
+  --orange: #ffb400;
+  --orange-light: #f2c273;
+  --purple-dark: #6f2fff;
+  --purple: #8b5cf6;
+  --purple-light: #d7c0ff;
+  --gray-dark: #7e8592;
+  --gray: #9ca1ab;
+  --gray-light: #d1d5db;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--gray);
+}
+
+.mobile {
+  display: none;
+}
+
+/* --------------------------------- */
+/* TYPOGRAPHY */
+/* --------------------------------- */
+
+h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.1;
+  color: var(--white);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.1;
+  color: var(--white);
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--white);
+}
+
+a {
+  font-size: 16px;
+  color: var(--gray-light);
+}
+
+a:hover {
+  color: var(--orange);
+}
+
+a img:hover {
+  transform: scale(1.2);
+}
+
+/* --------------------------------- */
+/* BUTTONS */
+/* --------------------------------- */
+
+button {
+  padding: 10px 24px;
+  border-radius: 100px;
+  background: var(--orange);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--orange-light);
+}
+
+/* --------------------------------- */
+/* UTILITIES */
+/* --------------------------------- */
+
+.orange {
+  color: var(--orange);
+}
+
+.purple {
+  color: var(--white);
+  background: var(--purple-dark);
+}
+
+.purple:hover {
+  background: var(--purple-light);
+}
+
+.white {
+  color: var(--black);
+  background: var(--white);
+}
+
+.white:hover {
+  background: var(--purple-light);
+}
+
+.outline {
+  color: var(--orange);
+  border: 1px solid var(--orange);
+  background: transparent;
+}
+
+.font20 {
+  font-size: 20px;
+}
+
+.font16 {
+  font-size: 16px;
+}
+
+.font14 {
+  font-size: 14px;
+}
+
+/* --------------------------------- */
+/* LAYOUT */
+/* --------------------------------- */
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #460378;
+}
+
+header {
+  width: 100%;
+  min-height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+}
+
+header .logo {
+  font-size: 24px;
+  color: var(--white);
+}
+
+.navigation,
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.btnBox {
+  display: flex;
+  gap: 16px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #4b0082 0%, #2a0047 100%);
+}
+
+.hero .picture {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.hero .info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 80px;
+}
+
+.hero .info button {
+  padding: 20px 50px;
+  font-weight: 700;
+}
+
+main {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.cards {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cards .card {
+  flex: 1;
+  min-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px;
+  border-radius: 16px;
+  background: #2a0047;
+}
+
+.cards .cardBox img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* --------------------------------- */
+/* MOBILE 390px */
+/* --------------------------------- */
+
+@media (max-width: 391px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+
+  h1 {
+    font-size: 21px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 390px;
+  }
+
+  header {
+    min-height: 50px;
+    padding: 12px 16px;
+  }
+
+  header .logo {
+    font-size: 18px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    min-height: 220px;
+    padding: 16px;
+    flex-direction: row-reverse;
+    gap: 20px;
+  }
+
+  .hero .picture {
+    position: static;
+    max-width: 120px;
+  }
+
+  .hero .info {
+    gap: 12px;
+    padding: 0;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .cards .card {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .cashback {
+    width: 100%;
+    padding: 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  footer {
+    height: auto;
+    padding: 16px;
+  }
+}
+
