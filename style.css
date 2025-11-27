@@ -326,7 +326,7 @@ footer {
 
 /* MOBILE */
 
-@media (max-width: 391px) {
+@media (max-width: 501px) {
   .desktop {
     display: none;
   }
@@ -398,7 +398,7 @@ footer {
   }
 
   .container {
-    max-width: 390px;
+    max-width: 500px;
   }
 
   .menu {
